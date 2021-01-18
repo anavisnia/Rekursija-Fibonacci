@@ -18,17 +18,28 @@ public class Rekursija {
         return sk * fakt(sk - 1);
     }
     // logika, dar ne rekursine funkcija
-    public static void fib(int sk1, int sk2, int max) {
-        for(int i = 0; i < max; i++) {
-            int sum = sk1 + sk2;
+    public static void fib(long sk1, long sk2, long max) {
+        // 1 1 2 3 5 8 13
+            long sum = sk1 + sk2;
             System.out.println(sum);
             sk1 = sk2;
             sk2 = sum;
             if((sk1 + sk2) > max) {
-               break;
+               return;
             }
-        }
+            fib(sk1, sk2, max);
     }
+//    public static void fib(int sk1, int sk2, int max) {
+//        for(int i = 0; i < max; i++) {
+//            int sum = sk1 + sk2;
+//            System.out.println(sum);
+//            sk1 = sk2;
+//            sk2 = sum;
+//            if((sk1 + sk2) > max) {
+//               break;
+//            }
+//        }
+//    }
 
     public static void main(String[] args) {
         int sk = 4;
@@ -37,7 +48,7 @@ public class Rekursija {
             f *= i;
         }
         System.out.println("Faktorial:");
-        System.out.println(f);
+        System.out.println(fakt(5));
         System.out.println("-------------");
         /*
         4! = 4 * 3 *2 * 1; faktorialas
