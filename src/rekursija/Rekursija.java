@@ -17,7 +17,7 @@ public class Rekursija {
         }
         return sk * fakt(sk - 1);
     }
-    
+    // logika, dar ne rekursine funkcija
     public static void fib(int sk1, int sk2, int max) {
         for(int i = 0; i < max; i++) {
             int sum = sk1 + sk2;
